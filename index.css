@@ -1,0 +1,38 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-icon {
+  stroke: maroon;
+  width: 3.2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 9.6rem;
+  font-size: 2.4rem;
+  padding: 0.8rem;
+}
+
+.l-side {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: #555;
+}
