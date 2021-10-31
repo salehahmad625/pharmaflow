@@ -57,10 +57,22 @@ Testing-Phase
 } */
 
 .work-container {
-  margin: 0 auto;
-  width: 90rem;
-  display: flex;
+  /*margin: 0 auto;
+  width: 90rem;*/
+  display: block;
   justify-content: space-between;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tasks {
