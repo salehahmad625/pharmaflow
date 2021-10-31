@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/work.css" />
-
     <title>Document</title>
   </head>
   <body>
@@ -41,6 +40,44 @@
       <br />
       <div class="tech-desc">
         <h1 id="techName"></h1>
+      </div>
+      <br />
+      <div class="tasks">
+        <div class="curr-tasks">
+          <h2>Current Tasks</h2>
+        </div>
+        <div class="completed">
+          <h2>Completed Tasks</h2>
+        </div>
+        <div class="assigned">
+          <h2>Tasks to Assign</h2>
+          <br />
+          <button id="assign">Assign Task +</button>
+        </div>
+      </div>
+      <div class="bg-modal">
+        <div class="modal-content">
+          <div class="close">+</div>
+          <div class="content">
+            <h2>Assign Technician to:</h2>
+            <form id="myForm" class="form">
+            <input type="radio" id="input" name="station" value="Prescription Input" />
+            <label for="input">Prescription Input</label><br />
+            <input type="radio" id="filling" name="station" value="Prescription Filling" />
+            <label for="filling">Prescription Filling</label><br />
+            <input
+              type="radio"
+              id="verification"
+              name="station"
+              value="Pharmacist Verification"
+            />
+            <label for="verification">Pharmacist Verification</label><br />
+            <input type="radio" id="clerk" name="station" value="Checkout Clerk" />
+            <label for="clerk">Checkout Clerk</label><br />
+          </div>
+          <button id="modal-submit">Submit</button>
+        </form>
+        </div>
       </div>
     </div>
   </body>
