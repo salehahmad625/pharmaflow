@@ -17,6 +17,8 @@ body {
   width: 3.2rem;
 }
 
+/* Stylized CSS */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -36,11 +38,13 @@ nav {
   text-decoration: none;
   color: #555;
 }
-.work-container {
-  display: block;
-  justify-content: center;
-  align-items: center;
-}
+
+/* Functional CSS */
+/* 
+
+Testing-Phase
+
+
 .dropdown {
   display: flex;
   justify-content: center;
@@ -50,6 +54,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+.work-container {
+  margin: 0 auto;
+  width: 90rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tasks {
