@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <nav class="nav-bar">
+        <div class="l-side">
+          <a href="index.html" class="product-name nav-link">Pharma~Flow </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="nav-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+            />
+          </svg>
+        </div>
+        <a href="help.html" class="help-link nav-link">Help</a>
+      </nav>
+
+      <div class="work-container">
+        <div class="sign-up">
+          <h3>Log-In / Registration page</h3>
+          <input
+            type="email"
+            placeholder="Type your email"
+            id="email"
+            class="sm-margin"
+          />
+          <input
+            type="password"
+            placeholder="Enter your Password"
+            id="password"
+          />
+          <br />
+          <div class="btn-cont">
+            <button id="signup" class="btn--full btn">Sign Up</button>
+            <br />
+            <button id="signin" class="btn--full btn">
+              <a href="work.html" class="login-btn">login</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import {} from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js";
+      //import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged} from "firebase/auth";
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDzd6dVoVNiLhlAOCS7tgovHnhmYB-_2Ek",
+        authDomain: "pharmaflow.firebaseapp.com",
+        projectId: "pharmaflow",
+        storageBucket: "pharmaflow.appspot.com",
+        messagingSenderId: "684270527080",
+        appId: "1:684270527080:web:d1c24b2a02ed77ff6751dd",
+        measurementId: "G-BPMY4FPM6Q",
+      };
+
+      // Initialize Firebase
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth(app);
+
+      let signInBtn = document.getElementById("signin");
+
+      document.getElementById("signup").addEventListener("click", signUpUser);
+
+      function signUpUser() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            // ...
+            console.log("created");
+            createUser();
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+            console.log(errorCode + errorMessage);
+          });
+      }
+
+      document.getElementById("signin").addEventListener("click", signInUser);
+
+      function signInUser() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log("logged in");
+            signInBtn.style.display = "none";
+
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode + errorMessage);
+          });
+      }
+    </script>
+  </body>
+</html>

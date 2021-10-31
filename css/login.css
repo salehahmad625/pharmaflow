@@ -1,0 +1,126 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #a6d5fb;
+}
+
+.nav-icon {
+  stroke: maroon;
+  width: 3.2rem;
+}
+
+/* Stylized CSS */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 9.6rem;
+  font-size: 2.4rem;
+  padding: 0.8rem;
+  background-color: #ffa8a8;
+}
+
+.l-side {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: #555;
+}
+
+/* Functional CSS */
+/* 
+  
+  Testing-Phase
+  
+  
+  .dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tech-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+.work-container {
+  margin: 0 auto;
+  width: 90rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.4rem;
+}
+
+.work-container h3 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-cont {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  margin-left: 42rem;
+}
+
+.sm-margin {
+  margin-right: 4rem;
+}
+
+.help-link:hover {
+  background-color: #425564;
+  color: white;
+  border-radius: 0.2rem;
+  padding: 5px;
+}
+
+.help-link:active {
+  background-color: #111519;
+}
+
+button {
+  background-color: #40c057; /* Green */
+  border: none;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+
+.sign-up {
+  margin-top: 2rem;
+}
+
+.login-btn:link,
+.login-btn:visited {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
