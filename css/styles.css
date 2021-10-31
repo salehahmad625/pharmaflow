@@ -137,3 +137,7 @@ nav {
 .help-link:active {
   background-color: #111519;
 }
+
+.manage-link {
+  margin-left: 3rem;
+}
